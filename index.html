@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBank // Next-Gen Creative Banking</title>
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js for lightweight interactive tabs and logic -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0F19',
+                            card: '#161B26',
+                            neonGreen: '#00E676',
+                            neonBlue: '#00B0FF',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #00E676 0%, #00B0FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 20px rgba(0, 230, 118, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-100 font-sans antialiased selection:bg-brand-neonGreen selection:text-black">
+
+    <!-- Navbar -->
+    <nav class="border-b border-gray-800 bg-brand-dark/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i data-lucide="wallet" class="text-brand-neonGreen w-8 h-8"></i>
+                <span class="text-xl font-bold tracking-tight">Smart<span class="text-brand-neonBlue">Bank.</span></span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-400">
+                <a href="#features" class="hover:text-white transition">Features</a>
+                <a href="#simulator" class="hover:text-white transition">Yield Calculator</a>
+                <a href="#security" class="hover:text-white transition">Security</a>
+            </div>
+            <div>
+                <a href="#" class="bg-gradient-to-r from-brand-neonGreen to-brand-neonBlue text-black font-semibold px-5 py-2.5 rounded-full text-sm hover:opacity-90 transition shadow-lg shadow-brand-neonGreen/10">
+                    Open Account
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-neonGreen/10 text-brand-neonGreen text-xs font-semibold tracking-wider uppercase">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> The Future of Wealth is AI-Driven
+                </span>
+                <h1 class="text-5xl lg:text-6xl font-black tracking-tight leading-none">
+                    Smart banking for <br>
+                    <span class="gradient-text">creative minds.</span>
+                </h1>
+                <p class="text-gray-400 text-lg max-w-md">
+                    Stop letting traditional banks hold your capital hostage. Scale your assets with automated yields, global multi-currency business accounts, and zero hidden fees.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <button class="bg-white text-black font-semibold px-8 py-3.5 rounded-xl hover:bg-gray-100 transition flex items-center gap-2">
+                        Get Started <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                    <button class="border border-gray-700 bg-brand-card/50 hover:border-gray-500 px-8 py-3.5 rounded-xl transition flex items-center gap-2">
+                        <i data-lucide="play" class="w-4 h-4 text-brand-neonBlue"></i> Watch Demo
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Creative Visual Element: Floating Mockup -->
+            <div class="relative flex justify-center">
+                <div class="absolute -inset-4 bg-gradient-to-r from-brand-neonGreen to-brand-neonBlue opacity-10 blur-3xl rounded-full"></div>
+                <div class="w-full max-w-md bg-brand-card border border-gray-800 p-6 rounded-3xl shadow-2xl relative glow-effect transition-all duration-300">
+                    <div class="flex justify-between items-start mb-12">
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-gray-500">Available Balance</p>
+                            <h3 class="text-3xl font-bold mt-1">$142,384.50</h3>
+                        </div>
+                        <span class="bg-brand-neonGreen/20 text-brand-neonGreen text-xs px-2.5 py-1 rounded-md font-mono">+12.4% today</span>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex justify-between items-center text-sm p-3 rounded-xl bg-brand-dark/50 border border-gray-800/60">
+                            <div class="flex items-center gap-3">
+                                <div class="p-2 bg-brand-neonBlue/10 text-brand-neonBlue rounded-lg"><i data-lucide="arrow-down-left" class="w-4 h-4"></i></div>
+                                <div><p class="font-medium">Stripe Payout</p><p class="text-xs text-gray-500">Creative Agency Suite</p></div>
+                            </div>
+                            <span class="text-brand-neonGreen font-semibold">+$8,450.00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm p-3 rounded-xl bg-brand-dark/50 border border-gray-800/60">
+                            <div class="flex items-center gap-3">
+                                <div class="p-2 bg-purple-500/10 text-purple-400 rounded-lg"><i data-lucide="cpu" class="w-4 h-4"></i></div>
+                                <div><p class="font-medium">AI Smart Yield</p><p class="text-xs text-gray-500">Automated allocation</p></div>
+                            </div>
+                            <span class="text-brand-neonGreen font-semibold">+$42.10</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-gray-800 flex justify-between items-center text-xs text-gray-500 font-mono">
+                        <span>PREMIUM MEMBER</span>
+                        <span>•••• 8821</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Grid -->
+    <section id="features" class="py-20 border-t border-gray-900 bg-brand-dark relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <h2 class="text-3xl lg:text-4xl font-bold tracking-tight">Built for modern digital native economies</h2>
+                <p class="text-gray-400">Everything you expect from a premium bank, completely overhauled with artificial intelligence and beautiful design mechanics.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-brand-card border border-gray-800 p-8 rounded-2xl hover:border-gray-700 transition">
+                    <div class="w-12 h-12 rounded-xl bg-brand-neonGreen/10 text-brand-neonGreen flex items-center justify-center mb-6">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Instant Global Rails</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Wire instantly to over 140+ countries with localized banking details. Avoid standard SWIFT delays entirely.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-brand-card border border-gray-800 p-8 rounded-2xl hover:border-gray-700 transition">
+                    <div class="w-12 h-12 rounded-xl bg-brand-neonBlue/10 text-brand-neonBlue flex items-center justify-center mb-6">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">5.4% Auto-Compounding Yield</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Idle balances are swept automatically into tokenized treasury funds, letting your capital outpace inflation natively.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-brand-card border border-gray-800 p-8 rounded-2xl hover:border-gray-700 transition">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Programmable Security</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Generate single-use multi-tiered virtual cards on the fly. Prevent malicious merchant billing loops seamlessly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Interactivity Section (Yield Simulator) -->
+    <section id="simulator" class="py-20 bg-brand-card/30 border-t border-gray-900" x-data="{ deposit: 10000, years: 3 }">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold tracking-tight">See how fast your money <span class="gradient-text">compounds.</span></h2>
+                <p class="text-gray-400 text-sm">
+                    Unlike standard banks offering virtually zero return, SmartBank targets a high-velocity ecosystem strategy leveraging risk-managed tokenized assets.
+                </p>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <label class="text-gray-400">Initial Deposit</label>
+                            <span class="text-brand-neonGreen font-semibold font-mono" x-text="'$' + Number(deposit).toLocaleString()"></span>
+                        </div>
+                        <input type="range" min="1000" max="250000" step="1000" x-model="deposit" class="w-full h-1 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-brand-neonGreen">
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <label class="text-gray-400">Duration Period</label>
+                            <span class="text-brand-neonBlue font-semibold font-mono" x-text="years + ' Years'"></span>
+                        </div>
+                        <input type="range" min="1" max="10" step="1" x-model="years" class="w-full h-1 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-brand-neonBlue">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-brand-card border border-gray-800 p-8 rounded-2xl text-center space-y-4 shadow-xl">
+                <p class="text-sm uppercase tracking-widest text-gray-500">Estimated Balance Target</p>
+                <!-- Quick financial compound calculation logic run locally inside the UI state container -->
+                <h3 class="text-5xl font-black tracking-tight text-white font-mono" x-text="'$' + Math.round(deposit * Math.pow(1 + 0.054, years)).toLocaleString()"></h3>
+                <p class="text-xs text-gray-500">Calculated at a baseline variable percentage of 5.4% APY.</p>
+                <div class="pt-4">
+                    <button class="w-full bg-brand-neonBlue text-black font-semibold py-3 rounded-xl hover:opacity-90 transition text-sm">
+                        Lock In This Yield Profile
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-900 bg-brand-dark py-12 text-sm text-gray-600">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-2">
+                <i data-lucide="wallet" class="text-gray-500 w-5 h-5"></i>
+                <span class="font-bold text-gray-400">SmartBank.</span>
+            </div>
+            <p>&copy; 2026 SmartBank Inc. Banking services provided by E-Vault Bank, Members FDIC.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
